@@ -19,15 +19,13 @@ const App: React.FC = () => {
           <Hero />
         </section>
 
-        <section id="Experience">
+        <section id="experience">
           <Experience />
         </section>
         
         <section id="careertimeline">
           <CareerTimeline />
         </section>
-
-        <Stats />
         
         <section id="skills">
           <Skills />
