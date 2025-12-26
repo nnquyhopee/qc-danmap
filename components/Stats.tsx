@@ -21,7 +21,6 @@ const Stats: React.FC = () => {
                     label="Test Cases Written" 
                 />
             </div>
-            {/* jhjh */}
             <div className="mt-16 flex flex-col items-center gap-8">
                 <div className="text-center">
                     <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Core Competencies</h3>
