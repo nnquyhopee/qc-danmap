@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
-            {['About', 'Experience', 'Skills', 'Contact'].map((item) => (
+            {['Experience','About', 'CareerTimeLine', 'Skills', 'Contact'].map((item) => (
               <button 
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}

@@ -1,142 +1,93 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Experience: React.FC = () => {
   return (
-    <div className="w-full bg-slate-50 dark:bg-[#151a21] py-20 border-y border-slate-200 dark:border-[#283039]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center justify-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight text-center mb-2 text-slate-900 dark:text-white">Professional Journey</h2>
-            <div className="h-1 w-16 bg-primary rounded-full mb-6"></div>
-            <p className="text-slate-500 dark:text-slate-400 text-center max-w-lg text-lg">
-                A timeline of my career in Quality Assurance, highlighting key roles, achievements, and educational background.
-            </p>
+    <div className="flex flex-col">
+      <section className="relative flex flex-col items-center justify-center py-20 lg:py-32 px-4 overflow-hidden hero-pattern">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/20 blur-[100px] rounded-full pointer-events-none"></div>
+        <div className="relative z-10 flex flex-col items-center max-w-4xl text-center">
+          <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 backdrop-blur-sm">
+            <span className="material-symbols-outlined text-[18px] text-primary">verified</span>
+            <span className="text-sm font-semibold text-primary">QC/QA Engineer</span>
+          </div>
+          <div className="flex flex-col items-center leading-none mb-6">
+            <h1 className="text-[120px] sm:text-[160px] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-gray-800 to-gray-400 dark:from-white dark:to-gray-600">
+              1+
+            </h1>
+            <span className="text-2xl sm:text-3xl font-bold text-gray-500 dark:text-gray-400 -mt-4 sm:-mt-8">Years of Experience</span>
+          </div>
+          <h2 className="max-w-2xl text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
+            Ensuring software reliability through rigorous <span className="text-primary font-semibold">Manual & Automated Testing</span>. I break code so you don't have to.
+          </h2>
+          {/* <div className="flex flex-wrap justify-center gap-4">
+            <Link to="/experience" className="flex min-w-[140px] items-center justify-center gap-2 rounded-lg bg-primary h-12 px-6 text-white text-base font-bold shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all">
+              <span>View Projects</span>
+              <span className="material-symbols-outlined text-[20px]">arrow_forward</span>
+            </Link>
+            <Link to="/contact" className="flex min-w-[140px] items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-card-dark h-12 px-6 text-gray-900 dark:text-white text-base font-bold hover:bg-gray-50 dark:hover:bg-[#283039] transition-all">
+              <span>Contact Me</span>
+              <span className="material-symbols-outlined text-[20px]">mail</span>
+            </Link>
+          </div> */}
         </div>
+      </section>
 
-        <div className="flex flex-col">
-            <TimelineItem 
-                icon="workspace_premium" 
-                title="Fresher / Junior" 
-                company="HOPEE Co., Ltd." 
-                date="11/2024 - Present"
-                isCurrent={true}
-                items={[
-                    "Engaged in full-cycle testing for client projects, ensuring high-quality deliverables.",
-                    "Collaborating with cross-functional teams to resolve complex issues and improve product stability.",
-                    "Continuing to refine automation skills and contribute to internal QA process improvements."
-                ]}
-                tags={['Automation', 'Team Collaboration', 'Quality Control']}
-            />
-            
-            <TimelineItem 
-                icon="verified" 
-                title="Probation" 
-                company="HOPEE Co., Ltd." 
-                date="09/2024 - 11/2024"
-                items={[
-                    "Successfully transitioned from intern to probationary employee, taking on increased responsibilities.",
-                    "Executed regression testing plans and reported critical defects prior to release cycles.",
-                    "Demonstrated strong understanding of QA methodologies and tool proficiency."
-                ]}
-                tags={['Regression Testing', 'Bug Reporting']}
-            />
-
-            <TimelineItem 
-                icon="school" 
-                title="Intern" 
-                company="HOPEE Co., Ltd." 
-                date="06/2024 - 08/2024"
-                items={[
-                    "Gained hands-on experience in manual testing and familiarized with the company's tech stack.",
-                    "Assisted senior engineers in creating test cases and documentation.",
-                    "Participated in daily stand-ups and agile processes."
-                ]}
-                tags={['Manual Testing', 'Documentation', 'Agile']}
-            />
-
-            <TimelineItem 
-                icon="code" 
-                title="Computer Education" 
-                company="FPT Aptech" 
-                date="07/2023 - 05/2024"
-                subtext="Aptech Computer Education, India – in cooperation with FPT Corporation"
-                items={[
-                    "Completed intensive coursework in software development and testing fundamentals.",
-                    "Developed foundational knowledge in programming logic, database management, and web technologies.",
-                    "Participated in practical projects to apply theoretical concepts."
-                ]}
-                tags={['Software Development', 'Databases', 'Testing Fundamentals']}
-            />
-             <TimelineItem 
-                icon="public" 
-                title="International Student" 
-                company="Japan" 
-                date="2019 - 2023"
-                items={[
-                    "Pursued academic studies while adapting to a new cultural environment.",
-                    "Developed strong cross-cultural communication skills and resilience.",
-                    "Gained proficiency in the Japanese language and work ethic."
-                ]}
-                tags={['Japanese Language', 'Adaptability']}
-                last={true}
-            />
+      <section className="py-10 px-4 sm:px-8 lg:px-40 bg-background-light dark:bg-background-dark">
+        <div className="mx-auto max-w-[960px]">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-card-dark p-8 shadow-sm hover:border-primary/50 transition-colors group">
+              <div className="p-3 rounded-full bg-primary/10 text-primary mb-2 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">deployed_code</span>
+              </div>
+              <p className="text-4xl font-bold tracking-tight">2+</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Projects Delivered</p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-card-dark p-8 shadow-sm hover:border-primary/50 transition-colors group">
+              <div className="p-3 rounded-full bg-primary/10 text-primary mb-2 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">bug_report</span>
+              </div>
+              <p className="text-4xl font-bold tracking-tight">200+</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Bugs Reported</p>
+            </div>
+            <div className="flex flex-col items-center justify-center gap-2 rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-card-dark p-8 shadow-sm hover:border-primary/50 transition-colors group">
+              <div className="p-3 rounded-full bg-primary/10 text-primary mb-2 group-hover:scale-110 transition-transform">
+                <span className="material-symbols-outlined text-3xl">assignment</span>
+              </div>
+              <p className="text-4xl font-bold tracking-tight">500+</p>
+              <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">Test Cases Written</p>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section className="py-12 px-4 sm:px-8 lg:px-40">
+        <div className="mx-auto max-w-[960px] flex flex-col gap-8">
+          <div className="flex flex-col items-center text-center gap-2">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Core Competencies</h2>
+            <p className="text-gray-500 dark:text-gray-400">Tools and technologies I use to ensure quality.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3">
+            {[
+              { icon: 'pan_tool', label: 'Manual Testing' },
+              { icon: 'smart_toy', label: 'Selenium Automation' },
+              { icon: 'api', label: 'API Testing' },
+              { icon: 'bug_report', label: 'JIRA' },
+              { icon: 'database', label: 'SQL' },
+              { icon: 'autorenew', label: 'Regression Testing' },
+              { icon: 'terminal', label: 'Postman' },
+              { icon: 'code', label: 'Java' },
+            ].map((skill, index) => (
+              <div key={index} className="flex h-10 items-center justify-center gap-x-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-card-dark px-4 shadow-sm hover:border-primary hover:text-primary transition-colors cursor-default">
+                <span className="material-symbols-outlined text-[20px]">{skill.icon}</span>
+                <p className="text-sm font-medium">{skill.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
-};
-
-interface TimelineItemProps {
-    icon: string;
-    title: string;
-    company: string;
-    date: string;
-    items: string[];
-    tags: string[];
-    subtext?: string;
-    isCurrent?: boolean;
-    last?: boolean;
-}
-
-const TimelineItem: React.FC<TimelineItemProps> = ({ icon, title, company, date, items, tags, subtext, isCurrent, last }) => {
-    return (
-        <div className="grid grid-cols-[48px_1fr] gap-x-4 sm:gap-x-6 group">
-            <div className="flex flex-col items-center pt-2">
-                <div className={`flex h-12 w-12 items-center justify-center rounded-full ring-4 ring-slate-50 dark:ring-[#151a21] z-10 border transition-all duration-300 ${isCurrent ? 'bg-primary/20 text-primary border-primary/20' : 'bg-white dark:bg-card-dark text-slate-500 dark:text-slate-400 border-slate-200 dark:border-slate-700'}`}>
-                    <span className="material-symbols-outlined text-[24px]">{icon}</span>
-                </div>
-                {!last && <div className="w-[2px] bg-slate-200 dark:bg-slate-700 h-full grow my-2 group-hover:bg-primary/30 transition-colors"></div>}
-            </div>
-            
-            <div className="pb-10">
-                <div className={`rounded-xl p-6 sm:p-8 shadow-sm border transition-all duration-300 ${isCurrent ? 'bg-white dark:bg-surface-dark border-primary/30 shadow-[0_0_20px_rgba(19,127,236,0.05)]' : 'bg-white dark:bg-card-dark border-slate-200 dark:border-slate-700/50 hover:border-slate-300 dark:hover:border-slate-600'}`}>
-                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-4">
-                        <div>
-                            <h3 className={`text-xl font-bold transition-colors ${isCurrent ? 'text-primary' : 'text-slate-900 dark:text-white'}`}>{title}</h3>
-                            <p className="text-slate-500 dark:text-slate-400 font-medium">{company}</p>
-                            {subtext && <p className="text-slate-400 dark:text-slate-500 text-sm mt-1">{subtext}</p>}
-                        </div>
-                        <span className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold whitespace-nowrap w-fit ${isCurrent ? 'bg-primary/10 text-primary' : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400'}`}>
-                            {date}
-                        </span>
-                    </div>
-                    
-                    <ul className="list-disc list-outside ml-4 space-y-2 text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                        {items.map((item, idx) => (
-                            <li key={idx}>{item}</li>
-                        ))}
-                    </ul>
-                    
-                    <div className="flex flex-wrap gap-2">
-                        {tags.map(tag => (
-                            <span key={tag} className="inline-flex items-center rounded-md bg-slate-100 dark:bg-slate-800 px-2.5 py-1 text-xs font-medium text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                                {tag}
-                            </span>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
 };
 
 export default Experience;
